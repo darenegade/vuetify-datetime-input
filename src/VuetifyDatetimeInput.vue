@@ -144,7 +144,7 @@ export default {
     leaveInput() {
       if (!this.checkBothFieldsFilled()) {
         this.error = true;
-        this.errorMessages = "Datum und Zeit muss ausgefüllt werden";
+        this.errorMessages = "Date and Time needs to be filled";
       }
     },
     enterInput() {

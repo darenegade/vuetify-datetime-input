@@ -1,11 +1,7 @@
-import Vue from "vue";
 import VuetifyDatetimeInput from "./VuetifyDatetimeInput.vue";
-const Components = {
-  VuetifyDatetimeInput
+
+const install = Vue => {
+  Vue.component("v-datetime-input", VuetifyDatetimeInput);
 };
 
-Object.keys(Components).forEach(name => {
-  Vue.component(name, Components[name]);
-});
-
-export default Components;
+export default install;

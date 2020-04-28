@@ -4,11 +4,10 @@
   "license": "MIT",
   "author": "Darenegade <darenegade@gmx.de>",
   "description": "Finally a simple Vuetify Date/Time Input using nativ browser features.",
-  "main": "src/index.js",
   "files": [
-    "dist/*",
-    "src/*"
+    "dist/"
   ],
+  "main": "dist/vuetify-datetime-input.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -36,5 +35,16 @@
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "keywords": [
+    "vue",
+    "vuetify",
+    "date",
+    "time",
+    "vuetify-datetime-input",
+    "date input",
+    "time input",
+    "datetime input",
+    "input"
+  ]
 }

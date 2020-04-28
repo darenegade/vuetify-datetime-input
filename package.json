@@ -1,6 +1,6 @@
 {
   "name": "@darenegade/vuetify-datetime-input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "Darenegade <darenegade@gmx.de>",
   "description": "Finally a simple Vuetify Date/Time Input using nativ browser features.",
@@ -13,7 +13,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
-    "build-package": "vue-cli-service build --target lib --name vuetify-datetime-input ./src/index.js"
+    "build-package": "vue-cli-service build --target lib --name vuetify-datetime-input ./src/index.js",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",

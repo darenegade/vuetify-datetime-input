@@ -65,7 +65,14 @@ import { VBtn, VIcon, VInput, VTextField, VRow, VCol } from "vuetify/lib";
 
 export default {
   name: "VuetifyDatetimeInput",
-  components: [VBtn, VIcon, VInput, VTextField, VRow, VCol],
+  components: {
+    "v-btn": VBtn,
+    "v-icon": VIcon,
+    "v-input": VInput,
+    "v-text-field": VTextField,
+    "v-row": VRow,
+    "v-col": VCol
+  },
   props: {
     value: String,
     readonly: Boolean,

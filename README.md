@@ -12,11 +12,12 @@ or
 yarn add  @darenegade/vuetify-datetime-input
 ```
 
+Import in `main.js`.
 ```js
 import Vue from 'vue'
-import DatetimeInput from 'vuetify-datetime-input'
+import "@darenegade/vuetify-datetime-input"
 
-Vue.use(DatetimeInput)
+...
 ```
 
 ## Usage

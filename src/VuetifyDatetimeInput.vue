@@ -61,8 +61,11 @@
 </template>
 
 <script>
+import { VBtn, VIcon, VInput, VTextField, VRow, VCol } from "vuetify/lib";
+
 export default {
   name: "VuetifyDatetimeInput",
+  components: [VBtn, VIcon, VInput, VTextField, VRow, VCol],
   props: {
     value: String,
     readonly: Boolean,
@@ -74,7 +77,10 @@ export default {
     persistentHint: Boolean,
     hint: String,
     label: String,
-    rules: Array
+    rules: {
+      type: Array,
+      default: () => []
+    }
   },
   data() {
     return {

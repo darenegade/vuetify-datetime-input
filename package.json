@@ -14,7 +14,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
     "build-package": "vue-cli-service build --target lib --name vuetify-datetime-input ./src/index.js",
-    "publish": "npm publish"
+    "publish": "npm publish && npm version patch"
   },
   "repository": {
     "type": "git",

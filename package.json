@@ -15,7 +15,6 @@
     "build-package": "vue-cli-service build --target lib --name vuetify-datetime-input ./src/index.js"
   },
   "dependencies": {
-    "user": "0.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

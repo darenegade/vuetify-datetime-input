@@ -13,8 +13,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
-    "build-package": "vue-cli-service build --target lib --name vuetify-datetime-input ./src/index.js",
-    "publish": "npm publish && npm version patch"
+    "build-package": "vue-cli-service build --target lib --name vuetify-datetime-input ./src/index.js"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,8 @@
   "author": "Darenegade <darenegade@gmx.de>",
   "description": "Finally a simple Vuetify Date/Time Input using nativ browser features.",
   "files": [
-    "dist/"
+    "dist/",
+    "src/"
   ],
   "main": "dist/vuetify-datetime-input.common.js",
   "scripts": {

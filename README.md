@@ -40,6 +40,7 @@ Once installed, it can be used in a template as simply as:
 | ----------------      | -----------   | -------------                     | ----------------------------------    |
 | datetime (model)      | Date/String   |                                   | Time input model.                     |
 | readonly              | Boolean       | false                             | Input is readonly.                    |
+| disabled              | Boolean       | false                             | Input is disabled.                    |
 | hideDetails           | Boolean       | false                             | Hides details under input.            |
 | dense                 | Boolean       | false                             | Input is dense.                       |
 | filled                | Boolean       | false                             | Input is filled.                      |

@@ -3,6 +3,7 @@
     <div class="overline">{{ label }}</div>
     <v-input
       :readonly="readonly"
+      :disabled="disabled"
       :hide-details="hideDetails"
       v-model="value"
       :rules="[...rules, dateFilled]"
@@ -19,6 +20,7 @@
             :label="dateLabel"
             ref="day"
             :readonly="readonly"
+            :disabled="disabled"
             v-model="day"
             :error="error"
             hide-details
@@ -37,6 +39,7 @@
             :label="timeLabel"
             ref="time"
             :readonly="readonly"
+            :disabled="disabled"
             v-model="time"
             :error="error"
             hide-details
@@ -76,6 +79,7 @@ export default {
   props: {
     value: String,
     readonly: Boolean,
+    disabled: Boolean,
     hideDetails: Boolean,
     dense: Boolean,
     filled: Boolean,

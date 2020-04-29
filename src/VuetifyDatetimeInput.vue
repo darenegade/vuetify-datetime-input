@@ -16,7 +16,7 @@
         <v-col cols="6">
           <v-text-field
             required
-            label="Datum"
+            :label="dateLabel"
             ref="day"
             :readonly="readonly"
             v-model="day"
@@ -34,7 +34,7 @@
         <v-col cols="6">
           <v-text-field
             required
-            label="Zeit"
+            :label="timeLabel"
             ref="time"
             :readonly="readonly"
             v-model="time"
@@ -84,6 +84,18 @@ export default {
     persistentHint: Boolean,
     hint: String,
     label: String,
+    timeLabel: {
+      type: String,
+      default: () => "Time"
+    },
+    dateLabel: {
+      type: String,
+      default: () => "Date"
+    },
+    incompleteErrorMessage: {
+      type: String,
+      default: () => "Date and Time needs to be filled"
+    },
     rules: {
       type: Array,
       default: () => []
@@ -96,7 +108,7 @@ export default {
       error: false,
       errorMessages: "",
       dateFilled: () =>
-        this.checkBothFieldsFilled() || "Datum und Zeit muss ausgefüllt werden"
+        this.checkBothFieldsFilled() || this.incompleteErrorMessage
     };
   },
   mounted() {
@@ -144,7 +156,7 @@ export default {
     leaveInput() {
       if (!this.checkBothFieldsFilled()) {
         this.error = true;
-        this.errorMessages = "Date and Time needs to be filled";
+        this.errorMessages = this.incompleteErrorMessage;
       }
     },
     enterInput() {

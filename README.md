@@ -32,19 +32,22 @@ Once installed, it can be used in a template as simply as:
 
 ## Properties
 
-| Name              | Type          | Default Value | Description                       |
-| ----------------  | -----------   | ------------- | ----------------------------------|
-| datetime (model)  | Date/String   |               | Time input model.                 |
-| readonly          | Boolean       | false         | Input is readonly.                |
-| hideDetails       | Boolean       | false         | Hides details under input.        |
-| dense             | Boolean       | false         | Input is dense.                   |
-| filled            | Boolean       | false         | Input is filled.                  |
-| outlined          | Boolean       | false         | Input is outlined.                |
-| clearable         | Boolean       | true          | Input is clearable.               |
-| persistentHint    | Boolean       | false         | Activates persistent hint.        |
-| hint              | String        | false         | Text of persistent hint.          |
-| label             | String        | ""            | Label of Input.                   |
-| rules             | Array         | []            | Validation rules.                 |
+| Name                  | Type          | Default Value                     | Description                           |
+| ----------------      | -----------   | -------------                     | ----------------------------------    |
+| datetime (model)      | Date/String   |                                   | Time input model.                     |
+| readonly              | Boolean       | false                             | Input is readonly.                    |
+| hideDetails           | Boolean       | false                             | Hides details under input.            |
+| dense                 | Boolean       | false                             | Input is dense.                       |
+| filled                | Boolean       | false                             | Input is filled.                      |
+| outlined              | Boolean       | false                             | Input is outlined.                    |
+| clearable             | Boolean       | true                              | Input is clearable.                   |
+| persistentHint        | Boolean       | false                             | Activates persistent hint.            |
+| hint                  | String        | false                             | Text of persistent hint.              |
+| label                 | String        | ""                                | Label of Input.                       |
+| date-label            | String        | "Date"                            | Label of Date-Input.                  |
+| time-label            | String        | "Time"                            | Label of Time-Input.                  |
+| incompleteErrorMessage| String        | "Date and Time needs to be filled"| Error message if one field is missing.|
+| rules                 | Array         | []                                | Validation rules.                     |
 
 ## Events
 

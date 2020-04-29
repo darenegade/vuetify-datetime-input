@@ -12,7 +12,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "demo": "vue-cli-service serve ./demo/main.js",
-    "demo-build": "vue-cli-service build --mode demo ./demo/main.js",
+    "demo-build": "vue-cli-service build ./demo/main.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
     "build-package": "vue-cli-service build --target lib --name vuetify-datetime-input ./src/index.js"

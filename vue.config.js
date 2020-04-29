@@ -1,4 +1,5 @@
 module.exports = {
   css: { extract: false },
-  publicPath: process.env.NODE_ENV === "demo" ? "/vuetify-datetime-input/" : "/"
+  publicPath:
+    process.env.NODE_ENV === "production" ? "/vuetify-datetime-input/" : "/"
 };

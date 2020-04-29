@@ -1,6 +1,6 @@
 # vuetify-datetime-input
 
-Finally a simple Vuetify Date/Time Input using nativ browser features.
+Finally, a simple Vuetify Date/Time Input using native browser features.
 
 ## Installation
 

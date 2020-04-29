@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "12"
+cache:
+  directories:
+    - "node_modules"
+install:
+  - npm install
+branches:
+  except:
+    - gh-pages
+script:
+  - npm run demo-build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master

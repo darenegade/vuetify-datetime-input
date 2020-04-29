@@ -2,6 +2,10 @@
 
 Finally, a simple Vuetify Date/Time Input using native browser features.
 
+## Demo
+
+[Try it out!](https://darenegade.github.io/vuetify-datetime-input/)
+
 ## Installation
 
 ```shell

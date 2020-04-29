@@ -1,6 +1,6 @@
 {
   "name": "@darenegade/vuetify-datetime-input",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "license": "MIT",
   "author": "Darenegade <darenegade@gmx.de>",
   "description": "Finally a simple Vuetify Date/Time Input using nativ browser features.",

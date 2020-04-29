@@ -1,3 +1,5 @@
 module.exports = {
-  css: { extract: false }
+  css: { extract: false },
+  publicPath:
+    process.env.NODE_ENV === "production" ? "/vuetify-datetime-input/" : "/"
 };

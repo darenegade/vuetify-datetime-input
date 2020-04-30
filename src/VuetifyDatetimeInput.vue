@@ -200,7 +200,7 @@ export default {
     parseDay(timestamp) {
       if (!this.browserSupportsDateInput && this.lang !== "en") {
         this.day = dayjs(timestamp).format("L");
-        console.log(this.day)
+        console.log(this.day);
       } else {
         return timestamp.toISOString().replace(/T.*/, "");
       }

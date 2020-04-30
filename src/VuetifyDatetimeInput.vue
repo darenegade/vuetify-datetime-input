@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { VBtn, VIcon, VInput, VTextField, VRow, VCol } from "vuetify/lib";
+import { VBtn, VCol, VIcon, VInput, VRow, VTextField } from "vuetify/lib";
 
 export default {
   name: "VuetifyDatetimeInput",

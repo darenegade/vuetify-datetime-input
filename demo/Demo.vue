@@ -10,6 +10,7 @@
                   <v-card-text>
                     <v-form ref="form" v-model="valid">
                       <v-datetime-input
+                        :key="lang"
                         label="The Date-Time Input"
                         :outlined="outlined"
                         :filled="filled"
@@ -18,11 +19,12 @@
                         :readonly="readonly"
                         :disabled="disabled"
                         :hide-details="hideDetails"
+                        :lang="lang"
                         :rules="[v => !!v || 'Datetime needs to be filled']"
                         v-model="value"
                       />
                     </v-form>
-                    <div>Value is: {{ value }}</div>
+                    <div>Value is (ISO-Format): {{ value }}</div>
                     <div>Form is valid: {{ valid }}</div>
                   </v-card-text>
                 </v-card>
@@ -37,6 +39,9 @@
                     <v-switch dense hide-details v-model="readonly" label="Readonly"></v-switch>
                     <v-switch dense hide-details v-model="disabled" label="Disabled"></v-switch>
                     <v-switch dense hide-details v-model="hideDetails" label="Hide Details"></v-switch>
+                    <v-select dense :items="['en', 'de', 'es']" v-model="lang" label="Language"
+                              persistent-hint hint="Only on browser not supporting Date/Time" class="mt-5"
+                    ></v-select>
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -52,7 +57,7 @@
 export default {
   name: "demo",
   data: () => ({
-    value: null,
+    value: "",
     outlined: false,
     filled: false,
     clearable: false,
@@ -60,7 +65,8 @@ export default {
     readonly: false,
     disabled: false,
     hideDetails: false,
-    valid: true
+    valid: true,
+    lang: "en"
   })
 };
 </script>

@@ -5,8 +5,8 @@
         <v-content>
           <v-layout>
             <v-row justify="center">
-              <v-col cols="12">
-                <v-card class="mx-auto mt-12" width="50rem">
+              <v-col cols="10">
+                <v-card class="mx-auto mt-12" :width="$vuetify.breakpoint.mdAndUp ? '50%' : '100%'">
                   <v-card-text>
                     <v-form ref="form" v-model="valid">
                       <v-datetime-input
@@ -24,13 +24,15 @@
                         v-model="value"
                       />
                     </v-form>
-                    <div>Value is (ISO-Format): {{ value }}</div>
-                    <div>Form is valid: {{ valid }}</div>
+                    <div class="subtitle-1">Value is (ISO-Format)</div>
+                    <div>{{ value ? value : "unset" }}</div>
+                    <div class="subtitle-1">Form is valid</div>
+                    <div>{{ valid }}</div>
                   </v-card-text>
                 </v-card>
               </v-col>
-              <v-col cols="12">
-                <v-card class="mx-auto mt-5" width="50rem">
+              <v-col cols="10">
+                <v-card class="mx-auto mt-5" :width="$vuetify.breakpoint.mdAndUp ? '50%' : '100%'">
                   <v-card-text>
                     <v-switch dense hide-details v-model="outlined" label="Outlined"></v-switch>
                     <v-switch dense hide-details v-model="filled" label="Filled"></v-switch>
@@ -39,7 +41,7 @@
                     <v-switch dense hide-details v-model="readonly" label="Readonly"></v-switch>
                     <v-switch dense hide-details v-model="disabled" label="Disabled"></v-switch>
                     <v-switch dense hide-details v-model="hideDetails" label="Hide Details"></v-switch>
-                    <v-select dense :items="['en', 'de', 'es']" v-model="lang" label="Language"
+                    <v-select dense :items="['en', 'de', 'es']" v-model="lang" label="Locale"
                               persistent-hint hint="Only on browser not supporting Date/Time" class="mt-5"
                     ></v-select>
                   </v-card-text>

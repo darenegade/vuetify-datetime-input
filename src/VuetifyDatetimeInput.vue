@@ -115,7 +115,7 @@ export default {
       type: Array,
       default: () => []
     },
-    lang: {
+    locale: {
       type: String,
       default: () => "en"
     }
@@ -137,11 +137,11 @@ export default {
   created() {
     this.setBrowserSupportsDateInput();
     if (this.isCustomTextMode()) {
-      dayjs.locale(this.lang);
+      dayjs.locale(this.locale);
       dayjs.extend(customParseFormat);
       dayjs.extend(localizedFormat);
 
-      switch (this.lang) {
+      switch (this.locale) {
         case "de":
           this.localeFormat = dayjsDe.formats.L;
           break;
@@ -242,7 +242,7 @@ export default {
       return !!(this.time && this.day) || (!this.time && !this.day);
     },
     isCustomTextMode() {
-      return !this.browserSupportsDateInput && this.lang !== "en";
+      return !this.browserSupportsDateInput && this.locale !== "en";
     }
   }
 };

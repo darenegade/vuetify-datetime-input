@@ -24,7 +24,7 @@
                         v-model="value"
                       />
                     </v-form>
-                    <div>Value is: {{ value }}</div>
+                    <div>Value is (ISO-Format): {{ value }}</div>
                     <div>Form is valid: {{ valid }}</div>
                   </v-card-text>
                 </v-card>
@@ -57,7 +57,7 @@
 export default {
   name: "demo",
   data: () => ({
-    value: null,
+    value: "",
     outlined: false,
     filled: false,
     clearable: false,

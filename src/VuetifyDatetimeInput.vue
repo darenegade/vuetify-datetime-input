@@ -107,6 +107,10 @@ export default {
       type: String,
       default: () => "Date and Time needs to be filled"
     },
+    dateformatErrorMessage: {
+      type: String,
+      default: () => "Wrong Dateformat"
+    },
     rules: {
       type: Array,
       default: () => []
@@ -130,9 +134,9 @@ export default {
         this.checkBothFieldsFilled() || this.incompleteErrorMessage
     };
   },
-  mounted() {
+  created() {
     this.setBrowserSupportsDateInput();
-    if (!this.browserSupportsDateInput && this.lang !== "en") {
+    if (this.isCustomTextMode()) {
       dayjs.locale(this.lang);
       dayjs.extend(customParseFormat);
       dayjs.extend(localizedFormat);
@@ -174,8 +178,9 @@ export default {
         this.error = false;
         this.errorMessages = "";
         let date;
-        if (!this.browserSupportsDateInput && this.lang !== "en") {
+        if (this.isCustomTextMode()) {
           let timeSplit = this.time.split(":");
+
           date = dayjs(this.day, this.localeFormat)
             .add(timeSplit[0], "h")
             .add(timeSplit[1], "m")
@@ -189,7 +194,7 @@ export default {
     },
     parseValue() {
       if (this.value) {
-        let newDate = new Date(this.value);
+        let newDate = dayjs(this.value).toDate();
         this.day = this.parseDay(newDate);
         this.time = this.parseTime(newDate);
       } else {
@@ -198,9 +203,8 @@ export default {
       }
     },
     parseDay(timestamp) {
-      if (!this.browserSupportsDateInput && this.lang !== "en") {
-        this.day = dayjs(timestamp).format("L");
-        console.log(this.day);
+      if (this.isCustomTextMode()) {
+        return dayjs(timestamp).format("L");
       } else {
         return timestamp.toISOString().replace(/T.*/, "");
       }
@@ -225,11 +229,20 @@ export default {
     },
     sendInput() {
       if (this.checkBothFieldsFilled()) {
-        this.$emit("input", this.getDate());
+        try {
+          let newDate = this.getDate();
+          this.$emit("input", newDate);
+        } catch (e) {
+          this.error = true;
+          this.errorMessages = this.dateformatErrorMessage;
+        }
       }
     },
     checkBothFieldsFilled() {
       return !!(this.time && this.day) || (!this.time && !this.day);
+    },
+    isCustomTextMode() {
+      return !this.browserSupportsDateInput && this.lang !== "en";
     }
   }
 };

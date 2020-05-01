@@ -38,7 +38,7 @@ Once installed, it can be used in a template as simply as:
 
 | Name                  | Type              | Default Value                     | Description                                       |
 | ----------------      | -----------       | -------------                     | ----------------------------------                |
-| datetime (model)      | String (ISO-Date) |                                   | Time input model.                                 |
+| value (model)         | String (ISO-Date) |                                   | Date-Time input model.                                 |
 | readonly              | Boolean           | false                             | Input is readonly.                                |
 | disabled              | Boolean           | false                             | Input is disabled.                                |
 | hideDetails           | Boolean           | false                             | Hides details under input.                        |

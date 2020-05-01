@@ -19,7 +19,7 @@
                         :readonly="readonly"
                         :disabled="disabled"
                         :hide-details="hideDetails"
-                        :lang="lang"
+                        :locale="lang"
                         :rules="[v => !!v || 'Datetime needs to be filled']"
                         v-model="value"
                       />
